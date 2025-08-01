@@ -22,4 +22,9 @@ public class BookService {
         return this.bookRepository.findAll();
     }
 
+    public Object findById(Long id) {
+        //return this.bookRepository.findById(id).orElse(null);
+        return this.bookRepository.findById(id).get();
+    }
+
 }

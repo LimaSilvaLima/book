@@ -4,6 +4,7 @@ package com.book.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -45,8 +46,15 @@ public class BookController {
         this.bookService.save(book);
         return "redirect:/"; // Redirect to the form after saving
     }
-
-
     
+    @GetMapping("/edit/{id}")
+    public ModelAndView getEdit(@PathVariable("id") Long id) {
+        ModelAndView mv = new ModelAndView("bookform");
+        mv.addObject("authors", authorService.getAllAuthors());
+        Book book = (Book) this.bookService.findById(id);
+        mv.addObject("book", book);
+        //mv.addObject("book", this.bookService.findById(id));
+        return mv;
+    }
 
 }
