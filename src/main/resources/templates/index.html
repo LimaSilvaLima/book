@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina inicial</title>
 </head>
 <body>
-    <h1>Ola mundo</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <br>
+    <h1>Listagem de Livros</h1>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="book : ${bookList}">
+                <th scope="row" th:text="${book.id}" ></th>
+                <td th:text="${book.name}" ></td>
+                <td th:text="${book.author.name}" ></td>
+                <td>
+                    <a href="@{/edit/{id}(id=${book.id})}">
+                            <i class="fas fa-edit"></i>
+                    </a>
+                    
+                    <a href="@{/delete/{id}(id=${book.id})}">
+                        <i class="fas fa-eraser"></i>
+                    </a>
+                    
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <a href="@{/book/form/add}">
+        <button class="btn btn-primary">Formulario Livro</button>
+    </a>
+
 </body>
+<footer>
+    <br>
+    <p>Copyright &copy; 2025</p>
+    <p>Desenvolvido por <a href=https://wa.me/5585989619607?text=Olá,%20gostaria%20de%20estabelecer%20contato> Jose Silva Lima</a></p>
+</footer>
 </html>
+
+

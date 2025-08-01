@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento BookForm</title>
+</head>
+<body>
+    <div th:if="${mensagem}" th:text="${mensagem}" ></div>
+
+    <form action="/book/form/save" method="post" th:object="${book}">
+        <h1>Book Form</h1>
+        Nome: <input type="text" id="name" name="name"/>
+        ISBN: <input type="text" id="isbn" name="isbn"/>
+        Descrição: <input type="text" id="description" name="description"/> 
+        Author: <select name="author">
+                    <option
+                        th:each="author : ${authors}" 
+                        th:value="${author.id}" 
+                        th:text="${author.name}">
+                    </option>
+                </select>
+                <button type="submit" >Salvar Livro</button> 
+    </form>
+</body>
+</html>
