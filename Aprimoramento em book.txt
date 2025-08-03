@@ -1,0 +1,15 @@
+
+Rota Para criação da Entrada - Ediçao e Delete de Autores:
+
+01 - Criar formulario de exibição de Autores "Authors.html"
+02 - Criar o endpoint para acessar Exibição de Autores
+03 - Criar o Button de Exibição de Autores
+04 - Criar no Formulario de Exbição Autores o Buton de "Autores - Formuilario de Inclusão"
+05 - Criar no controller o endpoint para acessar a pagina de inclusão de autores
+06 - Criar o Formulario html de inclusão de autores
+07 - Criar o service de inclusão de autores
+08 - criar os botoes de edição e delete de autores
+09 - Alterar o Html de Exibição de Autores para servir tambem a edição de Autores
+10 - Criar o service de edição de Autores
+11 - Criar o service deleção de Autores
+ 

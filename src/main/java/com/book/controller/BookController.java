@@ -57,4 +57,10 @@ public class BookController {
         return mv;
     }
 
+    @GetMapping("/delete/{id}")
+    public String deleteBook(@PathVariable("id") Long id) {
+        this.bookService.deleteById(id);
+        return "redirect:/"; // Redirect to the index page after deletion
+    }
+
 }
