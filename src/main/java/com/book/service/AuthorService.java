@@ -21,17 +21,20 @@ public class AuthorService {
         return Streamable.of(authors).toList();
 
     }
-}
 
-
-/*  public List<Author> getAllAuthors() {
-        // Logic to retrieve all authors
-        return List.of(); // Placeholder for actual implementation
+    public void save(Author author) {
+        this.authorRepository.save(author);
     }
-*/
+    public Author findById(Long id) {
+        return this.authorRepository.findById(id).orElse(null);
+    }
+    public void deleteById(Long id) {
+        this.authorRepository.deleteById(id);
+    }
 
-/*
- Streamable.of(authors).forEach(author -> {
-            // You can add any additional processing for each author here if needed
-});
- */
+    public List<Author> getAuthorList() {
+        return this.authorRepository.findAll();
+    }
+
+
+}
