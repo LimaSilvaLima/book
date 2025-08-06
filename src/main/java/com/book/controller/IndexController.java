@@ -19,7 +19,7 @@ public class IndexController {
     public ModelAndView getList() {
         List<Book> bookList = this.bookService.findAll();
         ModelAndView mv = new ModelAndView("index");
-        mv.addObject("bookList", bookList);
+        mv.addObject("booklist", bookList);
         return mv;
     }
 

@@ -23,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="book : ${bookList}">
+            <tr th:each="book : ${booklist}">
                 <th scope="row" th:text="${book.id}" ></th>
                 <td th:text="${book.name}" ></td>
                 <td th:text="${book.author.name}" ></td>
