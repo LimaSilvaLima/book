@@ -11,8 +11,8 @@
 
     <form action="/book/form/save" method="post" >
         
-        <div th:if="${book}">
-            <input type="text" readonly id="id" name="id" th:value="${book.id}" />
+        <div th:if="${book != null and book.id != null}">
+            <input type="text" readonly id="id" name="id" th:value="${book?.id}" />
         </div>
         Nome: <input type="text" class="form-control" id="name" name="name"
             th:value="${book?.name}"

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autore inclusão</title>
+</head>
+<body>
+    <h1>Modulo de inclusão de autores</h1>
+    <form action="/author/form/save" method="post" >
+        <div th:if="${mensagem}" th:text="${mensagem}" ></div>
+        
+        <div th:if="${author != null and author.id != null}">
+            <input type="text" readonly id="id" name="id" th:value="${author?.id}" />
+        </div>
+       Autor Nome: <input type="text" class="form-control" id="name" name="name"
+            th:value="${author?.name}"
+        />
+        Email: <input type="email" class="form-control" id="email" name="email"
+            th:value="${author?.email}"
+        />
+        
+        <button type="submit" class="btn btn-primary">Salvar Autor</button> 
+    </form>
+    
+</body>
+</html>

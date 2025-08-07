@@ -2,6 +2,8 @@ package com.book.entities;
 
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -27,9 +29,17 @@ import jakarta.persistence.Table;
 @Table(name = "author")
 public class Author {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE) 
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
+    @NotBlank(message = "Name is required")
     @Column(name = "name")
     private String name;
+    @Email(message = "Email should be valid")
+    @NotBlank(message = "Email is required")
     private String email;
+
+    public Author(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
 }

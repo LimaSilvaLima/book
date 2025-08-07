@@ -35,7 +35,8 @@ public class Book {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE) // Use IDENTITY for MySQL or PostgreSQL
+    // @GeneratedValue(strategy = GenerationType.IDENTITY) // Uncomment for MySQL or PostgreSQL
     private Long id;
     @NotBlank
     @Column(name = "name")
