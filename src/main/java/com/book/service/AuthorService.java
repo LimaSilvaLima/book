@@ -27,7 +27,7 @@ public class AuthorService {
        
     }
     public Author findById(Long id) {
-        return this.authorRepository.findById(id).orElse(null);
+        return this.authorRepository.findById(id).get();  //return this.authorRepository.findById(id).orElse(null)
     }
     public void deleteById(Long id) {
         this.authorRepository.deleteById(id);
