@@ -6,20 +6,20 @@ ok
 02 - Criar o endpoint para acessar Exibição de Autores  -  oK.
 03 - Criar o Button de Exibição de Autores - ok.
 04 - Criar no Formulario de Exbição Livros (index) o Buton de "Autores - Formulario de Inclusão"  - ok.
-05 - Criar no controller o endpoint para acessar a pagina de inclusão de autores
-06 - Criar o Formulario html de inclusão de autores...
-07 - Criar o service de inclusão de autores
-08 - Criar o service de busca de autores para adicionar ao html na forma objeto
-09 - criar os botoes de edição e delete de autores
-10 - Alterar o Html de Exibição de Autores para servir tambem a edição de Autores
-11 - Criar o service de edição de Autores
-12 - Criar o service deleção de Autores
-13 - implantar o postgres em nuvem
-14 - Fazer deploy da aplicação
-15 - Criar endpoint de inclusao autores
+05 - Criar no controller o endpoint para acessar a pagina de inclusão de autores -ok
+06 - Criar o Formulario html de inclusão de autores - ok
+07 - Criar o service de inclusão de autores - ok
+08 - Criar o service de busca de autores para adicionar ao html na forma objeto - ok
+09 - criar os botoes de edição e delete de autores - ok
+10 - Alterar o Html de Exibição de Autores para servir tambem a edição de Autores - ok
+11 - Criar o service de edição de Autores - ok
+12 - Criar o service deleção de Autores - Ok
+13 - Criar endpoint de inclusao autores - ok
+14 - implantar o postgres em nuvem
+15 - Fazer deploy da aplicação
 
- for (Author author : authorList){
-            System.out.println((author.getId()));
-            System.out.println(author.getName());
-            System.out.println(author.getEmail());
-        }
+
+
+	
+	
+	

@@ -65,6 +65,13 @@ public class AuthorController {
     }
 
 
+    @GetMapping("/authorDelete/{id}")
+    public String delete(@PathVariable("id") Long id) {
+        this.authorService.deleteById(id);
+        return "redirect:/authors"; // Redirect to the list of authors after deletion
+    }
+
+
 
 
 }
